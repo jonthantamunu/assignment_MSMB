@@ -1,0 +1,26 @@
+{% extends "base.html" %} {% block title %}Sign Up{% endblock %} {% block
+content %}
+<form method="POST" style="margin: 30px; border-radius: 20px; background-color:  #7dce82; padding-top: 5%; padding-bottom: 3%;">
+  <img src="{{ url_for('static', filename="msmb.png") }}" style="width: 25%; margin-left: 38%;"/>
+  <h3 align="center" style="">Sign Up</h3>
+  <div class="form-group" style="width: 90%; margin-left: 5%;">
+    <label for="email">Email Address</label>
+    <input type="email" class="form-control" id="email" name="email" placeholder="Enter email" />
+  </div>
+  <div class="form-group" style="width: 90%; margin-left: 5%;">
+    <label for="firstName">First Name</label>
+    <input type="text" class="form-control" id="firstName" name="firstName" placeholder="Enter first name"/>
+  </div>
+  <div class="form-group" style="width: 90%; margin-left: 5%;">
+    <label for="password1">Password</label>
+    <input type="password" class="form-control" id="password1" name="password1" placeholder="Enter password"/>
+  </div>
+  <div class="form-group" style="width: 90%; margin-left: 5%;">
+    <label for="password2">Password (Confirm)</label>
+    <input type="password" class="form-control" id="password2" name="password2" placeholder="Confirm password"/>
+  </div>
+  <br />
+  <button type="submit" class="btn btn-primary" style="margin-bottom: 2%; margin-left: 5%; background-color: #ff8360;">Submit</button>
+  <p  style="color: black; margin-left: 5%">Sudah punya akun? <a style="color: #ff8360;" href="/login">Login</a></p>
+</form>
+{% endblock %}

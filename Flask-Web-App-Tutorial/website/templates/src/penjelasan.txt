@@ -1,0 +1,14 @@
+<script type="text/javascript">
+    var source = new EventSource("/video");  // Memuat streaming video dan informasi kelas
+    var explanationElement = document.getElementById('explanation');  // Mendapatkan elemen paragraf penjelasan
+
+    source.onmessage = function (event) {
+        var data = JSON.parse(event.data);  // Mendapatkan informasi kelas dari JSON
+        if (data) {
+            // Menampilkan paragraf penjelasan sesuai dengan kelas gambar yang diunggah
+            explanationElement.innerText = 'Deteksi: ' + data.class_name + ' dengan confidence ' + data.conf;
+        } else {
+            explanationElement.innerText = 'Tidak ada deteksi.';
+        }
+    };
+</script>

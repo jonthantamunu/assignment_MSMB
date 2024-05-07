@@ -1,0 +1,8 @@
+flask
+Flask-SQLAlchemy
+flask-login
+flask_wtf
+wtforms
+werkzeug
+ultralytics
+psycopg2==2.9.2

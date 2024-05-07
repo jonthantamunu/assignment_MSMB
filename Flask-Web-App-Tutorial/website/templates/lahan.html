@@ -1,0 +1,49 @@
+{% extends "base.html" %} 
+{% block title %}Nama Lahan{% endblock %}  
+
+{% block content %}
+  <body>
+    <img src="{{ url_for('static', filename="msmb.png") }}" style="width: 25%; margin-left: 38%;" />
+    <div class="container" style="margin: 30px; border-radius: 20px; background-color:  #7dce82; padding-top: 5%; padding-bottom: 3%;">
+      <form action="/submit" method="POST">
+        <div class="form-group">
+          <h3>Nama Lahan</h3>
+          <input
+            type="text"
+            name="nama_lahan"
+            placeholder="Nama Lahan"
+          />
+        </div>
+        <div class="form-group">
+          <h3>Tanaman</h3>
+          <select name="tanaman">
+            <option value="">Pilih Jenis Tanaman</option>
+            <option value="Cabe">Cabe</option>
+            <option value="Jagung">Jagung</option>
+            <option value="Padi">Padi</option>
+            <option value="Semangka">Semangka</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <h3>Berapa Luas Tanah Anda</h3>
+          <input
+            type="text"
+            name="luas"
+            placeholder="Luas Lahan"
+          />
+        </div>
+        <div class="form-group">
+          <h3>Deskripsi Lahan</h3>
+          <textarea
+            name="deskripsi"
+            id=""
+            cols="30"
+            rows="10"
+            placeholder="Deskripsikan Kondisi Lahan Anda"
+          ></textarea>
+        </div>
+        <input type="submit" value="Submit" class="btn btn-primary" style="background-color: #ff8360;"/>
+      </form>
+    </div>
+  </body>
+{% endblock %}
