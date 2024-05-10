@@ -4,13 +4,13 @@ from os import path
 from flask_login import LoginManager
 
 db = SQLAlchemy()
-DB_NAME = "postgresql://jonathan:123456@localhost/msmb"
+DB_NAME = "postgresql://jonathan:123456@188.166.239.153/msmb"
 
 
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'hjshjhdjah kjshkjdhjs'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://jonathan:123456@localhost/msmb'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://jonathan:123456@188.166.239.153/msmb'
 
     db.init_app(app)
 
