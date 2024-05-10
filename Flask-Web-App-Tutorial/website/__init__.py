@@ -10,7 +10,7 @@ DB_NAME = "postgresql://jonathan:123456@localhost/msmb"
 def create_app():
     app = Flask(__name__)
     app.config['SECRET_KEY'] = 'hjshjhdjah kjshkjdhjs'
-    app.config['SQLALCHEMY_DATABASE_URI'] = 'jonathan://postgres:123456@localhost/msmb'
+    app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://jonathan:123456@localhost/msmb'
 
     db.init_app(app)
 
